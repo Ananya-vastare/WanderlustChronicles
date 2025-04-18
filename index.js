@@ -1,27 +1,47 @@
+// functions/api.js
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const dotenv = require('dotenv'); // For loading environment variables
+const dotenv = require('dotenv');
+const winston = require('winston');
+const serverless = require('serverless-http');
 
-dotenv.config(); // Load environment variables from .env file
+dotenv.config();
 
 const app = express();
 
+// Configure winston for logging
+const logDir = 'logs';
+if (!fs.existsSync(logDir)) {
+    fs.mkdirSync(logDir);
+}
+
+const logger = winston.createLogger({
+    level: 'info',
+    transports: [
+        new winston.transports.File({ filename: path.join(logDir, 'error.log'), level: 'error' }),
+        new winston.transports.File({ filename: path.join(logDir, 'combined.log') }),
+    ],
+});
+
 // Middleware to parse JSON data and handle CORS
 app.use(cors({
-    origin: process.env.FRONTEND_URL, // Your frontend URL (e.g., 'https://wander-lust-123456.netlify.app')
+    origin: 'https://wander-lust-123456.netlify.app', // Replace with your Netlify frontend URL
     methods: 'GET, POST',
     allowedHeaders: 'Content-Type',
 }));
 app.use(express.json());
 
-// Connect to MongoDB Atlas using environment variable for MongoDB URI
+// Connect to MongoDB Atlas
 const dbURI = process.env.MONGODB_URI;
 mongoose.connect(dbURI)
     .then(() => console.log("✅ MongoDB connected"))
-    .catch(err => console.error("❌ MongoDB connection error:", err));
+    .catch(err => {
+        logger.error("❌ MongoDB connection error:", err);
+        process.exit(1); // Exit the process if DB connection fails
+    });
 
-// ✅ Define UserLogin schema and model
+// Define UserLogin schema and model
 const UserLoginSchema = new mongoose.Schema({
     name: { type: String, required: true },
     password: { type: String, required: true }
@@ -29,7 +49,7 @@ const UserLoginSchema = new mongoose.Schema({
 
 const UserLogin = mongoose.models.UserLogin || mongoose.model("UserLogin", UserLoginSchema);
 
-// ✅ Define SignUp schema and model
+// Define SignUp schema and model
 const SignUpSchema = new mongoose.Schema({
     name: { type: String, required: true },
     password: { type: String, required: true },
@@ -39,7 +59,7 @@ const SignUpSchema = new mongoose.Schema({
 
 const SignUp = mongoose.models.SignUp || mongoose.model("SignUp", SignUpSchema);
 
-// ✅ Signup Route
+// Signup Route
 app.post("/signup", async (req, res) => {
     const { name, password, email, dateofbirth } = req.body;
 
@@ -70,11 +90,12 @@ app.post("/signup", async (req, res) => {
 
     } catch (error) {
         console.error("🔥 Signup error:", error);
+        logger.error("🔥 Signup error:", error);
         res.status(500).json({ message: "Server error during signup" });
     }
 });
 
-// ✅ Login Route
+// Login Route
 app.post("/login", async (req, res) => {
     let { name, password } = req.body;
 
@@ -100,12 +121,10 @@ app.post("/login", async (req, res) => {
 
     } catch (error) {
         console.error("🔥 Login error:", error);
+        logger.error("🔥 Login error:", error);
         res.status(500).json({ message: "Server error during login" });
     }
 });
 
-// ✅ Start Server - On Heroku, the port is dynamically assigned, so fallback to 5000 for local dev
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-    console.log(`🚀 Server running at http://localhost:${PORT}`);
-});
+// Export the handler for Netlify Functions
+module.exports.handler = serverless(app);
