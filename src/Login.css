@@ -1,0 +1,102 @@
+.logincontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    font-size: 1.2rem;
+    /* or any size you prefer */
+
+}
+
+.login-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+.Collage {
+    width: 600px;
+    height: 500px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.LoginCredentials {
+    width: 380px !important;
+    height: 550px !important;
+    padding: 30px;
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+    background-color: brown;
+    color: white !important;
+    border: 2px solid white;
+    font-weight: 20;
+}
+
+
+.LoginCredentials:hover {
+    transform: scale(1.05);
+}
+
+.LoginCredentials *,
+.LoginCredentials *::placeholder {
+    color: white !important;
+}
+
+.Inputtype {
+    width: 90% !important;
+    padding: 14px;
+    margin: 12px 0;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 16px;
+    color: white !important;
+    background: transparent;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.Inputtype:focus {
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.LoginCredentials button {
+    width: 90%;
+    padding: 14px;
+    background: white;
+    color: black !important;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.LoginCredentials button:hover {
+    background-color: blue;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+    color: whitesmoke !important;
+}
+
+.Heading {
+    display: flex;
+    justify-content: space-between;
+    /* or flex-start / center / etc. */
+    align-items: center;
+    /* vertically align */
+}

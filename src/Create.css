@@ -1,0 +1,568 @@
+h1 {
+    text-align: center;
+}
+
+.heading {
+    font-family: 'Poppins', sans-serif;
+    /* Modern and clean font */
+    font-size: 28px;
+    /* Adjust size */
+    font-weight: bold;
+    /* Makes it stand out */
+    color: white;
+    /* Deep blue for contrast */
+    text-align: center;
+    /* Centers the text */
+    margin-top: 20px;
+    letter-spacing: 1px;
+    /* Adds slight spacing for readability */
+}
+
+.PixelVerse {
+    display: flex;
+    flex-wrap: nowrap;
+    /* Prevents wrapping */
+    justify-content: flex-start;
+    /* Aligns items to the start */
+    gap: 50px;
+    /* Adds spacing between cards */
+    overflow-x: auto;
+    /* Enables horizontal scrolling if needed */
+    scrollbar-width: none;
+    /* Hides scrollbar in Firefox */
+
+}
+
+.card-title {
+    color: coral;
+}
+
+.cardreview {
+    background-color: whitesmoke !important;
+    border-radius: 20px;
+
+}
+
+.AddingImage {
+    background-color: blueviolet;
+    color: whitesmoke;
+    border-radius: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 50px;
+    border: none;
+}
+
+.AddingImage:hover {
+    border-radius: 0px;
+    background-color: bisque;
+    color: black;
+}
+
+.card-img-top {
+    width: 265px;
+    height: 260px;
+    border-radius: 20px;
+}
+
+.Reactions {
+    display: flex;
+    justify-content: center;
+    /* Centers horizontally */
+    align-items: center;
+    /* Aligns items vertically */
+    gap: 100px;
+    /* Adds spacing between buttons */
+    background-color: white;
+    margin-top: -15px;
+    height: 30px;
+    border-radius: 30px;
+}
+
+.Buttons {
+    background: none;
+    border: none;
+}
+
+.Icons {
+    width: 20px;
+    /* Adjust size to be visible but small */
+    height: 20px;
+    object-fit: contain;
+    /* Ensures proper scaling */
+    background: none;
+
+}
+
+.Review {
+    border: none;
+    width: 100% !important;
+
+}
+
+.SubmitButton {
+    background: brown !important;
+    color: white !important;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    height: 40px;
+    border-radius: 30px;
+}
+
+textarea {
+    max-width: 500px;
+    height: 400px;
+    padding: 12px;
+    border: 2px solid #FF6F91;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    background: whitesmoke;
+    color: black;
+    /* Corrected the color property */
+    outline: none;
+    resize: vertical;
+    transition: 0.3s ease-in-out;
+
+}
+
+textarea::placeholder {
+    color: black;
+    opacity: 0.8;
+}
+
+textarea:focus {
+    border-color: #FF512F;
+    box-shadow: 0 0 10px rgba(255, 81, 47, 0.5);
+}
+
+.ReviewSubmitted {
+    width: 50%;
+    /* Adjust width as needed */
+    max-width: 600px;
+    /* Prevents it from getting too wide */
+    min-width: 300px;
+    /* Ensures it doesn't shrink too much */
+    background-color: #FF7F50 !important;
+    min-height: 200px;
+    /* Starts with a small height */
+    padding: 16px;
+    border: 2px solid #FF6F91;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    background: whitesmoke;
+    color: black;
+    outline: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* Controls spacing between elements */
+    gap: 20px;
+
+    /* Auto height based on content */
+    height: auto;
+
+    /* Centers the box horizontally */
+    margin: 20px auto;
+}
+
+.ReviewSubmitted h3 {
+    margin: 0;
+    text-align: center;
+}
+
+.ReviewSubmitted ul {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.ReviewSubmitted ul li {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    word-wrap: break-word;
+}
+
+.container {
+    margin-left: -10px;
+    width: 80%;
+    /* or any specific width */
+    margin: 0 auto;
+
+}
+
+.ReviewBox {
+    background: #fff;
+    border-radius: 10px;
+    height: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    width: 100px !important;
+    scrollbar-width: none;
+
+}
+
+.ReviewBox:hover {
+    transform: scale(1.02);
+}
+
+.ReviewBox h4 {
+    font-size: 18px;
+    color: #ff6b6b;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.ReviewBox ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.ReviewBox li {
+    background: #ffecec;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.Review textarea {
+    width: 100%;
+    /* Makes it take full width */
+    height: 150px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ff6b6b;
+    /* Stylish border */
+    border-radius: 8px;
+    resize: vertical;
+    /* Allows vertical resizing */
+    background: #fffaf0;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.Review textarea:focus {
+    outline: none;
+    border-color: #ff4757;
+    box-shadow: 0 0 10px rgba(255, 71, 87, 0.5);
+}
+
+.PastReviews {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2), 0 0 0 3px white;
+    color: #333;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 100px;
+    background: #912F0F !important;
+    border: 0.1px solid white;
+
+}
+
+.PastReviews::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.ReviewContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 10px;
+
+}
+
+.ReviewBox {
+    background: #fff8c6;
+    /* Sticky note color */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+    max-width: 30%;
+    text-align: left;
+    transform: rotate(-2deg);
+    position: relative;
+    width: 100px;
+}
+
+
+
+.ReviewBox:nth-child(even) {
+    transform: rotate(2deg);
+}
+
+.ReviewBox h4 {
+    margin-bottom: 5px;
+    color: #444;
+}
+
+.FileInput {
+    display: block;
+    margin: 10px 0;
+}
+
+.PreviewImage {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.file-label1 {
+    background-color: brown !important;
+    color: white !important;
+    margin: 10px 0;
+    border: none;
+    height: 40px !important;
+    border-radius: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.TextareaWrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    scrollbar-width: none;
+    overflow-y: auto;
+    /* Enables vertical scrolling only when necessary */
+    overflow-x: hidden;
+    /* Prevents horizontal scrolling */
+}
+
+#review {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    border-radius: 10px;
+    resize: none;
+
+}
+
+.InlinePreviewImage {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+}
+
+.file-label {
+    background: linear-gradient(45deg, #FF9A8B, #FF6A88, #FF99AC);
+    color: black;
+    padding: 10px 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.FileInput {
+    display: none;
+    /* Hide default input */
+}
+
+.SubmitButton {
+    background-color: brown !important;
+    color: white !important;
+    margin: 10px 0;
+    border: none;
+    height: 40px !important;
+    border-radius: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.ReviewBox {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: #fff;
+    overflow: auto;
+}
+
+.ReviewBox1 {
+    width: 100%;
+    height: 500px;
+    /* Increased height for more space */
+    border-radius: 12px;
+    /* Smooth rounded corners */
+    padding: 20px;
+    /* Comfortable spacing */
+    background: #F4E1B1;
+    overflow: auto;
+
+    font-size: 18px;
+    color: black;
+    /* Darker text for better readability */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    /* Light shadow for depth */
+    transition: all 0.3s ease-in-out;
+
+}
+
+.InsertedImage {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 5px;
+}
+
+.PastReviews {
+    width: 100%;
+    max-width: 1200px;
+    /* Slightly wider container */
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.PastReviews h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Grid layout for aligning reviews in rows */
+.ReviewContainer {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(250px, 1fr));
+    /* 4 per row, wider boxes */
+    gap: 20px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.ReviewBox {
+    position: relative;
+    width: 100%;
+    min-width: 250px;
+    /* Increased min-width */
+    max-width: 300px;
+    /* Ensure it doesn't get too small */
+    min-height: 250px;
+    /* Increased height */
+    border: 1px solid #ddd;
+    padding: 20px;
+    background: #fffa90;
+    /* Sticky note color */
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    transform: rotate(-2deg);
+    transition: transform 0.2s ease-in-out;
+    text-align: center;
+}
+
+.ReviewBox:hover {
+    transform: rotate(0deg);
+}
+
+/* Pin image for sticky note effect */
+.PinImage {
+    width: 40px;
+    position: absolute;
+
+    left: 50%;
+    transform: translateX(-50%) rotate(-10deg);
+}
+
+.ReviewBox h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.ReviewBox p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Properly displaying images */
+.ReviewImage {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 10px;
+    display: block;
+    margin: 10px auto;
+}
+
+/* Responsive: 2 reviews per row on medium screens */
+@media (max-width: 900px) {
+    .ReviewContainer {
+        grid-template-columns: repeat(2, minmax(250px, 1fr));
+    }
+}
+
+/* Responsive: 1 review per row on small screens */
+@media (max-width: 500px) {
+    .ReviewContainer {
+        grid-template-columns: repeat(1, minmax(250px, 1fr));
+    }
+}
+
+.review-box {
+    position: relative;
+    padding-top: 20px;
+    /* Adjust space for the dot */
+}
+
+.review-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 15px;
+    /* Diameter of the dot */
+    height: 15px;
+    /* Diameter of the dot */
+    background-color: red;
+    /* Color of the dot */
+    border-radius: 50%;
+    /* Makes the dot circular */
+    transform: translateX(-50%);
+}

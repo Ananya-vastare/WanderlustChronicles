@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+.Intro {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2rem;
+    color: #2c2c2c;
+    /* deep purple for elegance */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.Map {
+    width: 90%;
+    height: 600px;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    /* smooth shadow */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Zoom in slightly on hover */
+.Map:hover {
+    transform: scale(1.01);
+}
+
+/* Make it responsive on smaller screens */
+@media (max-width: 768px) {
+    .Map {
+        width: 100%;
+        height: 400px;
+    }
+}
+
+.Search {
+    background: brown !important;
+    color: white !important;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    height: 40px !important;
+    border-radius: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 20px;
+
+}
+
+.Searchbox {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.Searchbar {
+    width: 300px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    background: #f0f0f0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.Searchbar:focus {
+    background: #ffffff;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}

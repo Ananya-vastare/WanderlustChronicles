@@ -1,0 +1,93 @@
+.logincontainer1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.login-box1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+
+
+.LoginCredentials1 {
+    width: 380px !important;
+    height: 700px !important;
+    padding: 30px;
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+    background-color: brown;
+    color: white !important;
+    border: 2px solid white;
+}
+
+
+.LoginCredentials1:hover {
+    transform: scale(1.05);
+}
+
+.LoginCredentials1 *,
+.LoginCredentials1 *::placeholder {
+    color: white !important;
+}
+
+.Inputtype {
+    width: 80%;
+    padding: 14px;
+    margin: 12px 0;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 16px;
+    color: white !important;
+    background: transparent;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.Inputtype:focus {
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.LoginCredentials1 button {
+    width: 90%;
+    padding: 14px;
+    background: white;
+    color: black !important;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.LoginCredentials1 button:hover {
+    background-color: blue;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+    color: whitesmoke !important;
+}
+
+.Heading {
+    display: flex;
+    justify-content: space-between;
+    /* or flex-start / center / etc. */
+    align-items: center;
+    /* vertically align */
+}

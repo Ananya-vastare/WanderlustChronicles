@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+
+body {
+    font-family: "Philosopher", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #D6D1CD;
+    color: black;
+    margin-top: 11px;
+    background: linear-gradient(to right, #f9d29d, #e7662b);
+    scrollbar-width: none;
+    /* For Firefox */
+    overflow-x: hidden;
+    /* Hides horizontal scrollbar */
+
+}
+
+
+
+
+.MainPageHeading {
+    font-family: 'Playfair Display', serif;
+    /* Elegant font */
+    font-size: 3rem;
+    /* Adjust size as needed */
+    text-align: center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    margin: 0;
+    padding: 20px 0;
+
+}
+
+.Subheading {
+
+    margin-left: "8px";
+    display: "inline-block";
+    vertical-align: "middle";
+    color: maroon;
+    font: bold;
+    font-size: 2cap;
+}
+
+
+.Images {
+    background: none;
+    width: 20px;
+    height: 20px;
+}
+
+.Headers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Centers everything horizontally */
+    padding: 10px 20px;
+    height: 60px;
+    background-color: transparent;
+    width: 100%;
+    color: #EDEDED;
+    position: relative;
+
+}
+
+.Title {
+    text-align: center;
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+    flex-grow: 1;
+}
+
+.Buttons {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    right: 20px;
+    /* Moves buttons to the right */
+    margin-right: 40px;
+    margin-top: -10px;
+}
+
+.Exploring {
+    height: 40px;
+    width: 100px;
+    background-color: #F2E9E4;
+    color: #4A4E69;
+    padding: 8px 10px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    border: none;
+    margin: 0;
+    gap: 5px;
+}
+
+.Exploring:hover {
+    box-shadow: 0 0 10px rgba(169, 128, 255, 0.7);
+    background-color: maroon;
+    color: #F2E9E4;
+    border: 1px solid white;
+}
+
+.Exploring:hover .Images {
+    filter: brightness(0) invert(1);
+}
+
+.Images {
+    width: 20px;
+    height: 20px;
+}
+
+img {
+    width: 20px;
+    background-color: white;
+}
+
+.container {
+    display: flex;
+    /* Aligns cards in one row */
+    gap: 30px;
+    /* Adds space between cards */
+    overflow-x: auto;
+    /* Enables horizontal scrolling if needed */
+}
+
+.Loc-name {
+    color: #fad0c4;
+}
+
+.location-icon {
+    width: 14px;
+    /* Adjust size to be visible but small */
+    height: 14px;
+    object-fit: contain;
+    /* Ensures proper scaling */
+    background: none;
+
+}
+
+a {
+    color: aliceblue;
+}
+
+.videos {
+    display: flex;
+    justify-content: center;
+    border-radius: 300px;
+}
+
+.VIDEO {
+    width: 100%;
+}
+
+.footer {
+    margin-top: 30px;
+    background: none;
+    color: white;
+    margin-left: -10px;
+    text-align: center;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.masonry {
+    column-count: 3;
+    /* Creates 3 columns */
+    column-gap: 10px;
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: -10px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.masonry-item {
+    break-inside: avoid;
+    margin-bottom: 10px;
+    /* Adds gap between rows (cards) */
+}
+
+.Cardtemplates {
+    display: inline-block;
+    /* Ensures correct column layout */
+    width: 100%;
+    /* Use full width to fit within columns */
+    gap: 0 !important;
+    margin-bottom: 10px;
+    /* Adds space between the cards */
+    background: #fff9e6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 1.2rem;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.07);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 92%, 95% 100%, 5% 100%, 0% 92%);
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+/* Image inside the card */
+.Cardtemplates img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* Different image heights for Masonry effect */
+.img1 {
+    height: 350px;
+    width: 300px;
+
+
+}
+
+.img2 {
+    height: 200px;
+    width: 150px;
+}
+
+.img3 {
+    height: 200px;
+}
+
+/* Paper shadow effect */
+.Cardtemplates::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100%;
+    height: 100%;
+    background: #fff3d4;
+    border-radius: 8px;
+    transform: rotate(-2deg);
+    z-index: -2;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Decorative tape */
+.Cardtemplates::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    width: 60px;
+    height: 25px;
+    background: repeating-linear-gradient(45deg, #c7a17a 0px, #c7a17a 2px, #fff9e6 2px, #fff9e6 4px);
+    transform: rotate(-10deg);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+}
+
+.Imagesdisplay {
+    width: 500px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    /* Centers content horizontally */
+    align-items: center;
+    /* Centers content vertically */
+    margin: 0 auto;
+    /* Centers the element horizontally in its parent container */
+    height: 50vh;
+}
