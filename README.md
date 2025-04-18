@@ -1,4 +1,32 @@
-# Getting Started with Wanderlust
+# WanderlustChronicles 🌍
+
+## 🧑‍🤝‍🧑 Team Name: WanderlustChronicles Crew
+
+### 👥 Team Members:
+- Ananya Vastare
+
+---
+
+## 📖 Project Description:
+**WanderlustChronicles** is a digital portfolio platform showcasing our team's passion for travel and technology. It captures the essence of travel through interactive storytelling, breathtaking visuals, and intelligent trip-planning tools. Designed for modern explorers, it brings the world closer — one journey at a time.
+
+---
+
+## 🛠️ Tools & Technologies Used:
+- **Frontend**: HTML5, CSS3, JavaScript, React.js  
+- **Backend**: Node.js, Express.js  
+- **Database**: MongoDB  
+- **Others**: Git, Figma (for design), Canva (for visual assets)
+
+---
+
+## 🚀 How to Run the Project Locally:
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/yourusername/WanderlustChronicles.git
+   cd WanderlustChronicles
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
